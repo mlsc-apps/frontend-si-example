@@ -4,11 +4,7 @@ import { Si } from 'frontend-si';
 const app = express();
 
 let data = {
-    message : {
-        msg : "Hello World!",
-        class : "container"
-    },
-    
+
     standings : {
     "row-1": ["John", "Mary", "Steven", "Sven"],
     "row-2": [1000, 2000, 3000, 4000],
@@ -50,10 +46,7 @@ app.get('/', function(req, res) {
 
 app.get('/form', function(req, res) {
     let dataSubmitted = {
-        message : {
-            msg : "Form submitted!",
-            class : "container"
-        },
+        message : "Form submitted!",
         standings : data.standings
     }
     Si.renderHTML('./templates/formResponse.si', dataSubmitted, (html) => {
@@ -63,10 +56,7 @@ app.get('/form', function(req, res) {
 
 app.get('/cancel', function(req, res) {
     let dataCancelled = {
-        message : {
-            msg : "Form cancelled",
-            class : "container"
-        },
+        message : "Form cancelled",
         standings : data.standings
     }
     Si.renderHTML('./templates/formResponse.si', dataCancelled, (html) => {
