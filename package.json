@@ -13,6 +13,7 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.18.1",
+    "frontend-si": "^1.0.0",
     "http": "^0.0.1-security",
     "nodemon": "^2.0.16",
     "path": "^0.12.7"
